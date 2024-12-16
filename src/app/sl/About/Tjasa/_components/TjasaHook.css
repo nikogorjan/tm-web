@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../../../../../public/Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../../../../../public/Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../../../../../public/Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../../../../../public/Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../../../../../public/Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLightItalic';
+    src: url('../../../../../../public/Fonts/Poppins-LightItalic.ttf') format('woff2');
+}
+
+
+
+.zivali-main {
+    width: 100%;
+    padding-bottom: 10vh;
+}
+
+.zivali-wrapper{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.zivali-first-row{
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.zivali-left{
+    width: 100%;
+}
+
+.zivali-right{
+    width: 50%;
+}
+
+.zivali-second-row{
+    display: flex;
+    gap: 1rem;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.second-img2-wrapper{
+    width: 50%;
+    
+}
+
+.second-img1-wrapper{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-img3-wrapper{
+    width: 50%;
+}
+
+.plant-img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.hook-video{
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    .zivali-wrapper{
+        flex-direction: column;
+    }
+
+    .zivali-second-row{
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    .zivali-first-row{
+        width: 100%;
+    }
+    
+    .zivali-left{
+        width: 100%;
+    }
+    
+    .zivali-right{
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    
+    .zivali-main {
+        width: 100%;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}

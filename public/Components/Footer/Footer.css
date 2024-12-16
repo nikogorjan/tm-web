@@ -1,0 +1,290 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+.footer-main{
+    width: 100%;
+    background-color: rgb(14, 14, 14);
+    padding: 10vh 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+}
+
+.footer-first-row{
+    width: 100%;
+    padding: 1rem 0;
+
+}
+
+.first-row-wrapper{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials-cell{
+    display: flex;
+}
+
+.social-icon-img{
+    width: 24px;
+    height: 24px;
+}
+
+.social-separator{
+    width: 1px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-left: 32px;
+    margin-right: 32px;
+
+}
+
+.instacell{
+    display: flex;
+}
+
+.facecell{
+    display: flex;
+}
+
+.centerit{
+    display: flex;
+    align-items: center;
+}
+
+.emailid{
+    font-size: 12px;
+    font-family: 'PoppinsLight';
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+
+.designer-cell{
+    display: flex;
+}
+
+.designerid{
+    font-size: 12px;
+    font-family: 'PoppinsLight';
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.designer-cell:hover .highlight{
+    color: #FF5852;
+}
+
+.margleft{
+    margin-left: 12px;
+}
+
+.socialedroe{
+    display: flex;
+}
+
+.copyrightimg{
+    width: 24px;
+    height: 24px;
+}
+
+.footers-wrapper{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mid-cell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.firstcell{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.lastcell{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-nav-paragraph{
+    font-size: 16px;
+    font-family: 'PoppinsLight';
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    margin: 0 12px;
+    transition: all 0.3s ease;
+}
+
+.footer-nav-paragraph:hover{
+    color: #FF5852;
+}
+
+.footer-separator{
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 1px;
+    margin-top: 5vh;
+}
+
+.footer-last{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.footer-cell{
+    width: 33.33333%;
+}
+
+@media (max-width: 1600px) {
+   .socialedroe{
+    flex-direction: column;
+    gap: 1rem;
+   }
+
+   .social-separator{
+    display: none;
+   }
+}
+
+@media (max-width: 1100px) {
+    .footer-main{
+        padding-bottom: 15vh;
+    }
+
+    .firstcell{
+        display: none;
+    }
+
+    .footer-cell{
+        width: 50%;
+    }
+
+    .footer-main{
+        
+    
+    }
+
+    .social-icon-img{
+        width: 24px;
+        height: 24px;
+    }
+    
+    .first-row-wrapper{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footerrerer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .socials-cell{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .none{
+        display: none;
+    }
+
+    .emailid{
+        font-size: 14px;
+    }
+
+    .wideseparator{
+        width: 100%;
+        height: 1px;
+        margin: 0 auto;
+    }
+
+    .socialedroe{
+    }
+
+    .mailcell{
+        margin-right: 16px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .footers-wrapper{
+        flex-direction: column;
+    }
+
+    .footer-cell{
+        width: 100%;
+    }
+
+    .mid-cell{
+        margin-bottom: 3rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .lastcell{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .socialedroe{
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .footer-last{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-nav-paragraph{
+        font-size: 24px;
+    }
+}

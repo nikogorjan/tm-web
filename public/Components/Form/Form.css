@@ -1,0 +1,943 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+.pulsing-circle-main {
+    position: fixed;
+    bottom: 64px;
+    /* Adjust this value as needed */
+    right: 64px;
+    /* Adjust this value as needed */
+    z-index: 8;
+    /* Ensure it's above other elements */
+    height: auto;
+    pointer-events: none;
+
+    /* Makes sure the circle doesn't block clicks on other elements */
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    perspective: 1000px;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pulse-button {
+    position: relative;
+    margin: 0;
+    /* Centered within the container */
+    display: block;
+    width: 100px;
+    /* Adjust size as needed */
+    height: 100px;
+    /* Adjust size as needed */
+    font-size: 1em;
+    font-weight: lighter;
+    font-family: 'PoppinsMedium';
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    line-height: 100px;
+    letter-spacing: -1px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    background: #FF5043;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(255, 80, 67, 0.5);
+    animation: pulse 1.5s infinite;
+    pointer-events: all;
+    /* Ensures the button itself is clickable */
+}
+
+.pulse-button:hover {
+    animation: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+    }
+
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+    }
+}
+
+.signup-menu {
+    z-index: 9999; /* Ensure this is high enough to be above other elements */
+    background-color: rgba(255, 80, 67, 1);
+    position: fixed; /* Change to absolute to work better with scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Allow the menu to grow based on content */
+    height: auto; /* Ensure it covers at least the full viewport height */
+    overflow-y: auto; /* Allows scrolling within the menu */
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Transparent by default */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth transition */
+    margin: 0 auto;
+}
+
+.menu2.active .signup-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* The expanding circle background */
+.signup-menu:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 80, 67, 1);
+    transition: all 500ms ease-in-out;
+    clip-path: circle(30px at calc(100% - 132px) calc(100% - 132px));
+    visibility: hidden;
+    z-index: 9998;
+    overflow-y: scroll; /* Allows scrolling within the menu */
+
+    /* Behind the .signup-menu itself */
+
+}
+
+
+/* Customize scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+.signup-menu::-webkit-scrollbar {
+    width: 6px; /* Make the scrollbar narrower */
+}
+
+.signup-menu::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Light background for the track */
+}
+
+.signup-menu::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2); /* Darker background for the thumb */
+    border-radius: 10px; /* Round the corners of the scrollbar thumb */
+}
+
+.signup-menu::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3); /* Slightly darker on hover */
+}
+
+/* Customize scrollbar for Firefox */
+.signup-menu {
+    scrollbar-width: thin; /* Make the scrollbar thinner */
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1); /* Thumb and track colors */
+    padding-bottom: 7rem;
+
+}
+
+.menu2.active .signup-menu:before {
+    visibility: visible;
+    clip-path: circle(100%);
+    padding-bottom: 7rem;
+
+}
+
+.end{
+    padding-bottom: 10rem;
+}
+
+/* The content container */
+.navigations2 {
+    position: relative;
+    z-index: 9999;
+    /* Above the pseudo-element and .signup-menu */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(255, 88, 82, 0.0);
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    overflow-y: scroll; /* Allows scrolling within the menu */
+    pointer-events: none;
+}
+
+.show-navs2 {
+    visibility: visible;
+    opacity: 1;
+    color: white;
+    /* Ensure the text is visible */
+    font-size: 2rem;
+    /* Adjust size for readability */
+    pointer-events: all;
+
+}
+
+
+.navigations2-first-row {
+    display: flex;
+
+    justify-content: flex-end;
+    
+}
+
+.nav-tgl1 {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+    margin-right: 12px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    background: #FF5043;
+    opacity: 0.95;
+    text-align: center;
+    outline: none;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none; /* Ensure no shadow is applied */
+
+
+}
+
+.nav-tgl1 > span {
+    display: block;
+    position: relative;
+    width: 34px;
+    height: 2px;
+    background: white;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-tgl1 > span:before,
+.nav-tgl1 > span:after {
+    content: '';
+    position: absolute;
+    width: 34px;
+    height: 2px;
+    background: white;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+}
+
+.nav-tgl1 > span:before {
+    transform: translateY(-10px);
+}
+
+.nav-tgl1 > span:after {
+    transform: translateY(10px);
+}
+
+/* When active, transform into an "X" */
+.menu2.active .nav-tgl1 > span {
+    background: transparent;
+}
+
+.menu2.active .nav-tgl1 > span:before {
+    transform: rotate(45deg);
+    background: white;
+    top: 0;
+    transform-origin: center;
+}
+
+.menu2.active .nav-tgl1 > span:after {
+    transform: rotate(-45deg);
+    background: white;
+    top: 0;
+    transform-origin: center;
+}
+
+
+.red-form-wrapper{
+    width: 60%;
+    margin: 0 auto;
+    
+    height: 100vh;
+    margin-top: 4rem;
+}
+
+.red-form-header{
+    font-family: 'PoppinsMedium';
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.red-form-header3{
+    font-family: 'PoppinsMedium';
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 32px;
+    margin-top: 2rem;
+}
+
+.red-form-services-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+
+}
+
+.service-item {
+    font-family: 'PoppinsMedium';
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    padding: 12px 24px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item span {
+    position: relative;
+    z-index: 2 !important; /* Ensure the text itself is on top */
+}
+
+.hover-circle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+    z-index: 1 !important; /* Circle has a lower z-index than the text */
+}
+
+.service-item:hover .hover-circle {
+    width: 300%;
+    height: 300%;
+}
+
+.service-item.selected-service {
+    background-color: white;
+    color: black;
+    z-index: 3; /* Ensure selected state is on top */
+}
+
+.service-name{
+    transition: all 0.3s ease-in-out;
+}
+
+.service-item:hover .service-name{
+    color: black;
+}
+
+
+
+
+.services-options-drop-down {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: calc(50% - 2rem); /* Set width to 50% minus 2rem */
+}
+
+.dropdown-select {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);;
+    font-family: 'PoppinsMedium';
+    font-weight: 400;
+    font-size: 32px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.0);
+    padding: 8px;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    width: 100%;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.dropdown-select:hover{
+
+    color: rgba(255, 255, 255, 1);;
+
+}
+
+
+.dropdown-select option {
+    background: #FF5043;
+    color: white;
+}
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'PoppinsMedium';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.st-ur{
+    margin-bottom: 0rem;
+    margin-top: 0;
+}
+
+.counter-container button {
+    background: transparent;
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 24px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.counter-container span {
+    font-size: 24px;
+    color: white;
+    min-width: 30px;
+    text-align: center;
+}
+
+.dropdown-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 0;
+    width: 100%;
+}
+
+
+
+
+.dropdown-arrow {
+    transition: all 0.3s ease;
+}
+
+.dropdown-container:hover .dropdown-arrow #fill {
+    opacity: 1 !important;
+    transform: translateY(-12px);
+}
+
+#border{
+    opacity: 1;
+}
+
+#fill{
+    transition: all 0.3s ease !important;
+}
+
+.dropdown-container:hover .dropdown-arrow{
+
+}
+
+.st-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.user-data-container{
+    margin-top: 5rem;
+}
+
+
+.user-data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Add some space between the rows */
+    width: 100%;
+}
+
+.user-data-row {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem; /* Add some space between the input boxes in the first row */
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.custom-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* White border bottom with 50% opacity */
+    background: transparent;
+    color: white; /* Ensure text is visible */
+    padding: 8px 0;
+    outline: none; /* Remove the default outline */
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Placeholder with 50% opacity */
+}
+
+.custom-input:not(:placeholder-shown) {
+    color: rgba(255, 255, 255, 1); /* Input text with 100% opacity */
+}
+
+.user-data-row:first-child .custom-input {
+    /* This is to ensure both inputs in the first row have equal width */
+    flex: 1;
+}
+
+
+
+.custom-phone-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.custom-input-phone {
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Match other inputs */
+    background: transparent;
+    color: white;
+    padding: 8px 0;
+    outline: none;
+    font-size: 16px;
+}
+
+.custom-phone-button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding-right: 8px;
+    outline: none;
+}
+
+.custom-phone-dropdown {
+    background-color: #333; /* Dropdown background color */
+    color: white;
+}
+
+.custom-phone-dropdown .flag-dropdown {
+    border: none;
+}
+
+.custom-phone-dropdown .country-list {
+    background-color: #333; /* Match the dropdown background */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.custom-phone-dropdown .country {
+    color: white;
+}
+
+.custom-phone-dropdown .country:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.react-tel-input .form-control{
+    opacity: 1;
+    color: white;
+    font-size: 32px !important;
+    background-color: #FF5043 !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.react-tel-input .flag-dropdown {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid #cacaca;
+    border-radius: 0px !important;
+}
+
+.flex11{
+    flex: 1 1;
+}
+
+.css-b62m3t-container {
+    position: relative;
+    box-sizing: border-box;
+    align-self: flex-end !important;
+}
+
+.css-13cymwt-control:hover {
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 1) !important;
+}
+
+.css-13cymwt-control {
+    border: none !important;
+    border-radius: 0px !important;
+    background-color: #FF5043 !important;
+    color: white !important;
+    border-bottom: 1px solid white !important;
+    font-family: 'PoppinsMedium';
+    font-weight: 400;
+    font-style: normal;
+    color: white !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+
+
+}
+
+.css-t3ipsp-control:hover{
+    border: none !important;
+
+}
+
+.css-t3ipsp-control{
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+    background-color: #FF5043 !important;
+    color: white !important;
+    border-bottom: 1px solid white !important;
+}
+
+.custom-country-select{
+    border-bottom: 0px solid rgba(255, 255, 255, 1) !important;
+    background-color: #FF5043 !important; 
+    transition: all 0.3s ease;
+}
+
+.country-select__menu{
+    background-color: #FF5043 !important;
+    font-family: 'PoppinsMedium' !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
+
+.css-qbdosj-Input {
+    color: white !important;
+    font-family: 'PoppinsMedium' !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
+
+.country-select__input{
+    color: white !important;
+    font-family: 'PoppinsMedium' !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
+
+.country-select__single-value{
+    color: white !important;
+    font-family: 'PoppinsMedium' !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
+
+.country-select__placeholder{
+    color: white !important;
+    opacity: 0.5 !important;
+    font-family: 'PoppinsMedium' !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
+
+.css-1u9des2-indicatorSeparator {
+    
+    width: 0px !important;
+    
+}
+
+.css-1fdsijx-ValueContainer{
+    padding-left: 0px !important;
+}
+.notwide{
+    width: calc(50% - 2rem); /* Set width to 50% minus 2rem */
+
+}
+
+.bigtext-container {
+    width: 100%;
+    margin-top: 1rem; /* Adjust the top margin as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-text-box {
+    width: 100%;
+    height: 150px; /* Adjust the height as needed */
+    padding: 12px;
+    font-size: 20px;
+    font-family: 'PoppinsLight'; /* Replace with your desired font */
+    font-weight: 400 !important;
+    font-style: normal !important;
+    color: white; /* Text color */
+    background-color: transparent; /* Background color */
+    border: 0px solid rgba(255, 255, 255, 0.5); /* Border with opacity */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Border with opacity */
+    padding: 0px;
+    border-radius: 0px; /* Adjust the border radius if needed */
+    outline: none;
+    resize: vertical; /* Allows vertical resizing */
+}
+
+.big-text-box::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Placeholder color with 50% opacity */
+    font-size: 32px;
+    font-family: 'PoppinsMedium'; /* Replace with your desired font */
+
+}
+
+.big-send-button{
+    margin-top: 5rem;
+    width: 304px;
+    height: 89px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'PoppinsMedium' !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    font-size: 32px;
+    background-color: white;
+    color: black;
+    border: 0px;
+    
+}
+
+.send-button-circle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+    z-index: 1 !important; /* Circle has a lower z-index than the text */
+}
+
+.big-send-button:hover .service-name{
+    color: white;
+}
+
+.form-wrapper{
+    width: 20%;
+    margin: 0 auto;
+    background-color: #FF5043;
+    padding: 3rem;
+    border-radius: 32px;
+}
+
+@media (max-width: 1400px) {
+    
+
+    .red-form-wrapper{
+        width: 80%;
+        
+    }
+}
+
+@media (max-width: 1100px) {
+    .big-send-button{
+        margin-top: 5rem;
+        width: 228px;
+        height: 66,75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'PoppinsMedium' !important;
+        font-weight: 400 !important;
+        font-style: normal !important;
+        font-size: 24px !important;
+        
+        border: 0px;
+        
+    }
+    
+    .big-text-box::placeholder {
+        color: rgba(255, 255, 255, 0.5); /* Placeholder color with 50% opacity */
+        font-size: 24px;
+        font-family: 'PoppinsMedium'; /* Replace with your desired font */
+    
+    }
+
+    .notwide{
+        width: 100%; /* Set width to 50% minus 2rem */
+    
+    }
+
+    
+    .custom-country-select{
+        width: 100%;
+        font-size: 24px !important;
+    }
+
+    .gap-row{
+        gap: 2rem !important;
+    }
+    .st-row{
+        margin-bottom: 2rem;
+    }
+
+    .section-margin{
+
+    }
+
+    .custom-input{
+        margin-bottom: 2rem;
+    }
+    .user-data-container {
+       
+        gap: 0px; /* Add some space between the rows */
+        margin-top: 2rem;
+    }
+    .user-data-row {
+        
+        margin-bottom: 0rem;
+        flex-direction: column;
+        gap: 0rem;
+    }
+
+    .services-options-drop-down{
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .red-form-wrapper{
+        width: 90%;
+        
+    }
+
+    .red-form-header{
+        font-size: 2.5rem;
+    }
+
+    .red-form-header3{
+        font-size: 1.5rem;
+    }
+
+    .service-item{
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .pulsing-circle-main {
+        position: fixed;
+        bottom: 24px;
+        /* Adjust this value as needed */
+        right: 24px;
+        /* Adjust this value as needed */
+        z-index: 8;
+        /* Ensure it's above other elements */
+        height: auto;
+        pointer-events: none;
+        /* Makes sure the circle doesn't block clicks on other elements */
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        perspective: 1000px;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pulse-button {
+        position: relative;
+        margin: 0;
+        /* Centered within the container */
+        display: block;
+        width: 80px;
+        /* Adjust size as needed */
+        height: 80px;
+        /* Adjust size as needed */
+        font-size: 1em;
+        font-weight: lighter;
+        font-family: 'PoppinsMedium';
+        font-weight: 400;
+    font-style: normal;
+        text-align: center;
+        line-height: 100px;
+        letter-spacing: -1px;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        background: #FF5852;
+        cursor: pointer;
+        box-shadow: 0 0 0 0 rgba(212, 90, 90, 0.5);
+        animation: pulse2 1.5s infinite;
+        pointer-events: all;
+        /* Ensures the button itself is clickable */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pulse-button:hover {
+        animation: none;
+    }
+
+    @keyframes pulse2 {
+        0% {
+            transform: scale(0.9);
+        }
+
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 40px rgba(90, 153, 212, 0);
+        }
+
+        100% {
+            transform: scale(0.9);
+            box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+        }
+    }
+
+}

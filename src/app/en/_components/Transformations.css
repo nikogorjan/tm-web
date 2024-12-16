@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../../../public/Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../../../public/Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../../../public/Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../../../public/Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../../../public/Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+.media-main{
+    width: 100%;
+    margin-top: 100px;
+    overflow: hidden;
+    transform: translateY(-32px);
+
+}
+
+.media-wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.media-img{
+    width: 100%;
+}
+
+.hide-media{
+    display: none;
+}
+
+.caro-holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.the-medias-link::before{
+    text-decoration: none;
+    background-image: none;
+}
+
+.media-wrapper .slick-slide {
+    padding-right: 24px; /* Add space inside each slide */
+    box-sizing: border-box; /* Ensure padding is included in the slide width */
+}
+
+.media-wrapper .slick-list {
+    margin-right: -24px; /* Counteract the added padding on the right of each slide */
+}
+
+
+
+.slick-arrow, .slick-next{
+    display: none !important;
+}
+
+@media (max-width: 1100px) {
+    .media-main{
+        transform: translateY(-32px);
+
+    }
+
+    .media-main{
+        width: 100%;
+        margin-top: 50px;
+    }
+    
+    .media-wrapper{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .hide-media{
+        display: flex;
+    }
+
+    .show-media{
+        display: none;
+    }
+}

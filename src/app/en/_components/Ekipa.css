@@ -1,0 +1,233 @@
+@font-face {
+  font-family: 'PoppinsRegular';
+  src: url('../../../../public/Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'PoppinsMedium';
+  src: url('../../../../public/Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'PoppinsLight';
+  src: url('../../../../public/Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'PoppinsBold';
+  src: url('../../../../public/Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'PoppinsBlack';
+  src: url('../../../../public/Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+.ekipa-mmmm {
+  padding: 10vh 0;
+
+}
+
+.ekipa-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  /* Adjust the gap as needed */
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 64px;
+
+}
+
+.left-image,
+.right-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-image img,
+.right-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right-images {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  /* Adjust the gap as needed */
+}
+
+.top-right,
+.bottom-right {
+  width: 100%;
+  object-fit: cover;
+}
+
+.team-icon {
+  width: 100%;
+  border-radius: 32px;
+}
+
+.theseheaders {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section-indicator{
+  background-color: #4D4D4D;
+  border-radius: 4px;
+  padding: 6px 12px;
+  box-sizing: border-box;
+  width: auto;
+  display: inline-block;
+  margin-bottom: 3rem;
+  color: white !important;
+}
+
+.alignself{
+  align-self: flex-start; /* Ensures it doesn't stretch to full width */
+
+}
+
+.align-left{
+  text-align: left;
+}
+
+.lighter{
+  background-color: #f1f1f1 !important;
+  color: #000 !important;
+}
+
+
+.grid-main{
+  padding-top: 7rem;
+}
+
+.grid-wrapper{
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+.bento-grid{
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.w-layout-grid{
+  grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+
+.bento-item{
+    position: relative;
+    overflow: hidden;
+}
+
+.item1{
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.item2{
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+.item3{
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.item4{
+  grid-area: 2 / 3 / 4 / 4;
+}
+
+.item5{
+  grid-area: 3 / 1 / 4 / 2;
+}
+
+.item6{
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.bento-img{
+  z-index: 1;
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+    height: 25rem;
+    border-radius: 10px;
+
+}
+
+.higher{
+  height: calc(50rem + 20px);
+
+}
+
+
+
+
+@media (max-width: 1100px) {
+
+.bento-grid{
+  flex-flow: column;
+      display: flex;
+
+}
+
+
+.grid-wrapper{
+  width: 90%;
+  margin: 0 auto;
+}
+.grid-main{
+  padding-top: 4rem;
+}
+}
+
+@media (max-width: 800px) {
+  .ekipa-main {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .ekipa-mmmm {
+    padding: 0vh 0;
+
+  }
+
+  .team-icon {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+
+  .bento-item.item3 {
+    position: relative;
+    width: 100%;
+    padding-top: 42%; /* 16:9 aspect ratio */
+    overflow: hidden;
+  }
+
+  .bento-item.item3 .bento-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+
+
+}

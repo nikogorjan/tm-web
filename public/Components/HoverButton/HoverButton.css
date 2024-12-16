@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+.hover-buttonr {
+    font-family: 'PoppinsMedium';
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    padding: 12px 24px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    background-color: black;
+}
+
+.hover-button-textr {
+    position: relative;
+    z-index: 2 !important; /* Ensure the text itself is on top */
+    color: white;
+}
+
+.hover-circler {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+    z-index: 1 !important; /* Circle has a lower z-index than the text */
+}
+
+.hover-buttonr:hover .hover-circler {
+    width: 300%;
+    height: 300%;
+}
+
+.hover-buttonr:hover .hover-button-textr {
+    
+    color: black;
+}

@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../../../../../public/Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../../../../../public/Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../../../../../public/Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../../../../../public/Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../../../../../public/Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLightItalic';
+    src: url('../../../../../../public/Fonts/Poppins-LightItalic.ttf') format('woff2');
+}
+
+.marsel-hook{
+    width: 100%;
+    padding: 10vh 0;
+}
+
+.marsel-hooh-wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mhoo-imags-row{
+    display: flex;
+    gap: 2rem;
+    box-sizing: border-box;
+    margin-top: 3rem;
+}
+
+.m-imgg{
+    width: 50%;
+    border-radius: 32px;
+}
+
+@media (max-width: 999px) {
+    .mhoo-imags-row{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        box-sizing: border-box;
+        margin-top: 3rem;
+    }
+
+    .m-imgg{
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    
+.marsel-hook{
+   padding-top: 0;
+}
+
+    
+}

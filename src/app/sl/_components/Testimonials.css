@@ -1,0 +1,380 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../../../public/Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../../../public/Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../../../public/Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../../../public/Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../../../public/Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+.testimonials-main{
+    transform: translateY(0px);
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10vh 0;
+
+
+}
+
+.testimonials-wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.testimonials-holder{
+    width: 100%;
+    margin-top: 32px;
+}
+
+.navigations-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.bullets{
+    display: flex;
+}
+
+.testimonial-bullet{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color:  rgba(0, 0, 0, 0.1);
+    margin-right: 24px;
+    cursor: pointer;
+}
+
+.bullet-active{
+    background-color:  rgba(0, 0, 0, 1.0);
+
+}
+
+.testimonials-holder-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.narekovaj-holder{
+    width: 128px;
+    
+}
+
+.slika-holder{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    border: 2px solid black;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+}
+
+.selected-img{
+    width: 100%;
+}
+
+.narekovaj-img{
+    width: 100%;
+}
+
+.testimonial-paragraph{
+    font-family: 'PoppinsLight';
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1.25rem, 1.1616rem + 0.524vw, 2rem);
+    text-align: left;
+    line-height: normal;
+    width: 85%;
+    margin-bottom: 32px;
+    transition: all 0.3s ease;
+    color: black;
+}
+
+.translateandchange{
+    opacity: 0;
+    transform: translateX(-32px);
+}
+
+.testimonial-name{
+    font-family: 'PoppinsRegular';
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1rem, 0.878rem + 0.3902vw, 1.5rem);
+    transition: all 0.3s ease;
+    color: black;
+}
+
+.nameandline-rov{
+    display: flex;
+    align-items: center;
+
+}
+
+.testimonial-line{
+    width: 64px;
+    height: 2px;
+    background-color: black;
+    margin-right: 24px;
+    transition: all 0.3s ease;
+}
+
+.changesize{
+    width: 0px;
+}
+
+.fadeaway{
+    opacity: 0;
+}
+
+.arrows{
+    display: flex;
+    align-items: center;
+  justify-content: space-between;
+}
+
+.button-next, .button-prev{
+    width: 64px;
+    height: 64px;
+    background-color: #ffffff;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-next:hover{
+    background-color: black;
+}
+
+.button-prev:hover{
+    background-color: black;
+}
+
+.button-next:hover .arrow,
+.button-next:hover .arrow::before,
+.button-next:hover .arrow::after {
+  background-color: #fff; /* Change arrow color to black on hover */
+}
+
+.button-prev:hover .arrow,
+.button-prev:hover .arrow::before,
+.button-prev:hover .arrow::after {
+  background-color: #fff; /* Change arrow color to black on hover */
+}
+
+
+.arrow {
+    display: block;
+    position: relative;
+    width: 15px; /* Length of the arrow */
+    height: 2px; /* Thickness of the arrow */
+    background-color: black; /* Arrow color */
+  }
+  
+  /* Arrow for the previous button "<" */
+  .button-prev .arrow::before {
+    content: '';
+    position: absolute;
+    top: -3px; /* Adjust distance from the center line */
+    left: 7px;
+    width: 10px; /* Length of the angled line */
+    height: 2px; /* Thickness of the angled line */
+    background-color: black;
+    transform: rotate(45deg); /* Angle of the line */
+  }
+  
+  .button-prev .arrow::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Adjust distance from the center line */
+    left: 7px;
+    width: 10px; /* Length of the angled line */
+    height: 2px; /* Thickness of the angled line */
+    background-color: black;
+    transform: rotate(-45deg); /* Angle of the line */
+  }
+  
+  /* Arrow for the next button ">" */
+  .button-next .arrow::before {
+    content: '';
+    position: absolute;
+    top: -3px; /* Adjust distance from the center line */
+    right: 7px;
+    width: 10px; /* Length of the angled line */
+    height: 2px; /* Thickness of the angled line */
+    background-color: black;
+    transform: rotate(-45deg); /* Angle of the line */
+  }
+  
+  .button-next .arrow::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Adjust distance from the center line */
+    right: 7px;
+    width: 10px; /* Length of the angled line */
+    height: 2px; /* Thickness of the angled line */
+    background-color: black;
+    transform: rotate(45deg); /* Angle of the line */
+  }
+
+  .heading-desktop-h3{
+    font-size: clamp(2rem, 1.7642rem + 1.3974vw, 4rem);
+    font-family: 'PoppinsBold';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 130%;
+}
+
+.text-medium-normal{
+    font-size: clamp(1rem, 0.9705rem + 0.1747vw, 1.25rem);
+    font-family: 'PoppinsRegular';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 150%;
+    margin-top: 24px;
+}
+
+.text-regular-semibold{
+    font-size: clamp(1rem, 0.9705rem + 0.1747vw, 1.0rem);
+    font-family: 'PoppinsBold';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 150%;
+    margin-top: 12px;
+}
+
+.black{
+    color: black;
+}
+
+
+.section-indicator{
+    background-color: #4D4D4D;
+    border-radius: 4px;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    width: auto;
+    display: inline-block;
+    margin-bottom: 3rem;
+    color: white !important;
+}
+
+.alignself{
+    align-self: flex-start; /* Ensures it doesn't stretch to full width */
+
+}
+
+.align-left{
+    text-align: left;
+}
+
+.lighter{
+    background-color: #f1f1f1 !important;
+    color: #000 !important;
+}
+
+@media (max-width: 1100px) {
+    .testimonials-main{
+        width: 100%;
+        padding-bottom: 20vh;
+    }
+    
+    .testimonials-wrapper{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .testimonials-holder-row{
+       
+        margin-bottom: 32px;
+    }
+
+    .narekovaj-holder{
+        width: 64px;
+        
+    }
+    
+    .slika-holder{
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 2px solid black;
+        overflow: hidden;
+    }
+
+    .testimonial-paragraph{
+        font-family: 'PoppinsLight';
+        font-weight: 400;
+        font-style: normal;
+        font-size: clamp(1.25rem, 1.1616rem + 0.524vw, 2rem);
+        text-align: left;
+        line-height: normal;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .testimonial-line{
+        width: 32px;
+       
+    }
+
+    .changesize{
+        width: 0px;
+    }
+
+    .testimonial-bullet{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color:  rgba(0, 0, 0, 0.1);
+        margin-right: 12px;
+        cursor: pointer;
+    }
+
+    .bullet-active{
+        background-color:  rgba(0, 0, 0, 1.0);
+    
+    }
+
+    .button-next, .button-prev{
+        width: 48px;
+        height: 48px;
+        background-color: #fff;
+        border: 2px solid black;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .button-next:hover{
+        background-color: black;
+    }
+}

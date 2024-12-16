@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../../../../public/Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../../../../public/Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../../../../public/Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../../../../public/Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../../../../public/Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLightItalic';
+    src: url('../../../../../public/Fonts/Poppins-LightItalic.ttf') format('woff2');
+}
+
+.smooth{
+    transition: all 0.6 ease;
+}
+
+
+.about-hook-main {
+    padding: 10vh 0;
+    padding-top: 10vh;
+}
+
+.about-hook-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-hook-right {
+    display: flex;
+    gap: 1rem;
+    box-sizing: border-box;
+
+}
+
+.about-hook-left {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+
+.about-hook-right {
+    width: 60%;
+}
+
+.img-holder {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.about-hook-img {
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+
+@media (max-width: 999px) {
+
+    .about-hook-main {
+        padding-top: 10vh;
+    }
+
+    .about-hook-wrapper {
+
+        flex-direction: column;
+    }
+
+    .about-hook-right {
+        display: flex;
+        gap: 1rem;
+        box-sizing: border-box;
+
+    }
+
+    .about-hook-left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: auto;
+        margin-bottom: 3rem;
+    }
+
+    .about-hook-right {
+        width: 100%;
+    }
+
+    .img-holder {
+        width: 50%;
+        border-radius: 10px;
+    }
+
+}

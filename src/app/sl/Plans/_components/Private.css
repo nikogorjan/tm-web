@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../../../../public/Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../../../../public/Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../../../../public/Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../../../../public/Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../../../../public/Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLightItalic';
+    src: url('../../../../../public/Fonts/Poppins-LightItalic.ttf') format('woff2');
+}
+
+.private-main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.private-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 64px;
+}
+
+.private-left {
+    width: 60%;
+
+}
+
+.private-right {
+    width: 40%;
+
+}
+
+.private-img {
+    width: 100%;
+}
+
+.private-content-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 32px;
+}
+
+.private-header {
+    font-family: 'PoppinsBold';
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1.5rem, 0.8902rem + 1.9512vw, 4rem);
+    color: #D6211A;
+}
+
+.private-paragraph{
+    font-family: 'PoppinsLight';
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1rem, 0.878rem + 0.3902vw, 1.5rem);
+}
+
+@media (max-width: 999px) {
+    .private-main {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .private-row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 64px;
+
+    }
+    
+    .private-left {
+        width: 100%;
+    
+    }
+    
+    .private-right {
+        width: 100%;
+    
+    }
+
+    .private-content-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+    
+}

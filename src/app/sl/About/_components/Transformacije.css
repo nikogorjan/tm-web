@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../../../../public/Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../../../../public/Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../../../../public/Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../../../../public/Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../../../../public/Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLightItalic';
+    src: url('../../../../../public/Fonts/Poppins-LightItalic.ttf') format('woff2');
+}
+
+.transformacije-main{
+    width: 100%;
+    padding: 10vh 0;
+
+}
+
+.item-img{
+    width: 100%; /* Full width of the slide */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: contain;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.swiper{
+    pointer-events: auto;
+    
+    transform: translateY(0%);
+    cursor: grab;
+
+}
+
+.mrganbo{
+    margin-bottom: 3rem;
+}
+
+.swiper-wrapper{
+    width: 100%;
+    max-height: 55vh;
+    display: flex;
+    align-items: center;
+    z-index: 11;
+    cursor: grab;
+}
+
+.swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Adjust height to ensure it fills the wrapper if needed */
+    border-radius: 10px; /* Ensure border-radius is applied here */
+    overflow: hidden;
+    max-height: 55vh;
+    position: relative;
+
+}
+
+.swipers-arrows{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 32px;
+}
+
+
+.arrows{
+    display: flex;
+    align-items: center;
+  justify-content: space-between;
+}
+
+.button-next, .button-prev{
+    width: 64px;
+    height: 64px;
+    background-color: #f9f9f9;
+    border: 2px solid #161B22;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-next:hover{
+    background-color: #161B22;
+}
+
+.button-prev:hover{
+    background-color: #161B22;
+}
+
+.button-next:hover .arrow,
+.button-next:hover .arrow::before,
+.button-next:hover .arrow::after {
+  background-color: #f9f9f9; /* Change arrow color to black on hover */
+}
+
+.button-prev:hover .arrow,
+.button-prev:hover .arrow::before,
+.button-prev:hover .arrow::after {
+  background-color: #f9f9f9; /* Change arrow color to black on hover */
+}
+
+
+.arrow {
+    display: block;
+    position: relative;
+    width: 15px; /* Length of the arrow */
+    height: 2px; /* Thickness of the arrow */
+    background-color: #161B22; /* Arrow color */
+  }
+  
+  /* Arrow for the previous button "<" */
+  .button-prev .arrow::before {
+    content: '';
+    position: absolute;
+    top: -3px; /* Adjust distance from the center line */
+    left: 7px;
+    width: 10px; /* Length of the angled line */
+    height: 2px; /* Thickness of the angled line */
+    background-color: #161B22;
+    transform: rotate(45deg); /* Angle of the line */
+  }
+  
+  .button-prev .arrow::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Adjust distance from the center line */
+    left: 7px;
+    width: 10px; /* Length of the angled line */
+    height: 2px; /* Thickness of the angled line */
+    background-color: #161B22;
+    transform: rotate(-45deg); /* Angle of the line */
+  }
+  
+  /* Arrow for the next button ">" */
+  .button-next .arrow::before {
+    content: '';
+    position: absolute;
+    top: -3px; /* Adjust distance from the center line */
+    right: 7px;
+    width: 10px; /* Length of the angled line */
+    height: 2px; /* Thickness of the angled line */
+    background-color: #161B22;
+    transform: rotate(-45deg); /* Angle of the line */
+  }
+  
+  .button-next .arrow::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Adjust distance from the center line */
+    right: 7px;
+    width: 10px; /* Length of the angled line */
+    height: 2px; /* Thickness of the angled line */
+    background-color: #161B22;
+    transform: rotate(45deg); /* Angle of the line */
+  }
+
+  .section-indicator{
+    background-color: #4D4D4D;
+    border-radius: 4px;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    width: auto;
+    display: inline-block;
+    margin-bottom: 3rem;
+    color: white !important;
+}
+
+.alignself{
+    align-self: flex-start; /* Ensures it doesn't stretch to full width */
+
+}
+
+.align-left{
+    text-align: left;
+}
+
+.lighter{
+    background-color: #f1f1f1 !important;
+    color: #000 !important;
+}
+
+ 
+  @media (max-width: 1000px) {
+    .transformacije-main{
+        padding-bottom: 0;
+    
+    }
+
+    .button-next, .button-prev{
+        width: 40px;
+        height: 40px;
+        background-color: #f9f9f9;
+        border: 2px solid #161B22;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-left: 8px;
+
+    }
+}

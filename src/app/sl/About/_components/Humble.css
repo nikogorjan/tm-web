@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../../../../public/Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../../../../public/Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../../../../public/Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../../../../public/Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../../../../public/Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLightItalic';
+    src: url('../../../../../public/Fonts/Poppins-LightItalic.ttf') format('woff2');
+}
+
+.humble-main{
+    width: 100%;
+    padding: 10vh 0;
+}
+
+.humble-wrapper{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.humble-left{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.humble-right{
+    width: 50%;
+}
+
+.humble-img{
+    width: 100%;
+    border-radius: 32px;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.relume-icon{
+    width: 48px;
+    height: 48px;
+}
+
+.black{
+    color: black;
+}
+
+.heading-desktop-h3{
+    font-size: clamp(2rem, 1.7642rem + 1.3974vw, 4rem);
+    font-family: 'PoppinsBold';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 130%;
+}
+
+.text-medium-normal{
+    font-size: clamp(1rem, 0.9705rem + 0.1747vw, 1.25rem);
+    font-family: 'PoppinsRegular';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 150%;
+    margin-top: 24px;
+}
+
+.marginbottom{
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 999px) {
+    .humble-wrapper{
+        flex-direction: column;
+    }
+
+    .humble-left{
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    
+    .humble-right{
+        width: 100%;
+    }
+
+    .humble-img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+}

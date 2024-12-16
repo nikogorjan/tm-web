@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../../../../public/Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../../../../public/Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../../../../public/Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../../../../public/Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../../../../public/Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLightItalic';
+    src: url('../../../../../public/Fonts/Poppins-LightItalic.ttf') format('woff2');
+}
+
+.opis-main {
+    width: 100%;
+
+}
+
+.opis-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.opis-left {
+    width: 50%;
+}
+
+.opis-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.couplewebred-img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.opis-content-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cilj-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 64px;
+}
+
+.cilj-content-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.slike-wrapper{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 64px;
+    display: flex;
+}
+
+.coach-cell{
+    width: 50%;
+}
+
+.coach-cell-content-wrapper{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.couplesingle-img{
+    width: 100%;
+
+}
+
+.coach-name{
+    text-align: center;
+    font-family: 'PoppinsLight';
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1.5rem, 1.378rem + 0.3902vw, 2rem);
+    margin-top: 20px;
+    color: #D6211A;
+}
+
+.imag-wrapper{
+    position: relative;
+}
+
+.imgs-shadow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px -95px 77px 16px rgba(0,0,0,0.75);
+
+}
+
+.moto-paragraph{
+    text-align: center;
+    font-family: 'PoppinsLightItalic';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.socials-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.icon-wrapper{
+    width: 20px;
+    height: 20px;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.insta-icon-wrapper{
+    width: 32px;
+    height: 32px;
+}
+
+.social-img{
+    width: 100%;
+}
+
+@media (max-width: 999px) {
+    .opis-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .opis-left {
+        width: 100%;
+    }
+
+    .opis-right {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .couplewebred-img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .cilj-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 64px;
+    }
+
+    .slike-wrapper{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .coach-cell{
+        width: 100%;
+        margin-bottom: 64px;
+    }
+    
+    .coach-cell-content-wrapper{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .imag-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .couplesingle-img{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .cilj-content-wrapper {
+        width: 100%;
+        margin: 0 auto;
+        text-align: left;
+    
+    }
+    
+    
+
+}

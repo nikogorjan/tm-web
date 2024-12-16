@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../../../../public/Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../../../../public/Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../../../../public/Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../../../../public/Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../../../../public/Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLightItalic';
+    src: url('../../../../../public/Fonts/Poppins-LightItalic.ttf') format('woff2');
+}
+
+
+.open-shadow-main{
+    width: 100%;
+    height: 100vh;
+    z-index: 99999999;
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: all 0.3s ease;
+    background-color: black;
+    
+}
+
+.close-shadow {
+    opacity: 0;
+    
+    pointer-events: none; /* And/or this */
+  }

@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('../../../../../public/Fonts/Poppins-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsMedium';
+    src: url('../../../../../public/Fonts/Poppins-Medium.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLight';
+    src: url('../../../../../public/Fonts/Poppins-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('../../../../../public/Fonts/Poppins-Bold.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsBlack';
+    src: url('../../../../../public/Fonts/Poppins-Black.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'PoppinsLightItalic';
+    src: url('../../../../../public/Fonts/Poppins-LightItalic.ttf') format('woff2');
+}
+
+
+.animated-main{
+    width: 100%;
+    margin-top: 121px;
+}
+
+.animated-wrapper{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.animated-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.animated-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.absolute-img1{
+    width: 100%;
+    
+    z-index: 1;
+}
+
+.absolute-img2{
+    width: 100%;
+    
+}
+
+.absolute-img3{
+    width: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.absolute-img4{
+    width: 60%;
+    transform: translate(-10%,50%);
+    z-index: 2;
+}
+
+.tmp{
+    height: 100vh;
+}
+
+.notitalic{
+    font-family: 'PoppinsLight';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.upmargin{
+    margin-top: 32px;
+}
+
+.animated-wrapper2{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.mobile{
+    display: none;
+}
+
+.znanost-content-wrapper{
+    transform: translateY(0%);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.margin-div{
+    margin-top: 15%;
+}
+
+@media (max-width: 999px) {
+
+    .mobile{
+        display: flex;
+        margin-top: 0 !important;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .animated-main{
+        width: 100%;
+        margin-top: 64px;
+    }
+
+    .margined{
+        margin-top: 50%;
+        padding-bottom: 25%;
+    }
+    .znanost-content-wrapper{
+        transform: translateY(0%);
+        width: 100%;
+    }
+    
+    
+    .animated-wrapper{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .animated-wrapper2{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 64px;
+        margin-bottom: 128px;
+    }
+    
+    .animated-left{
+        width: 100%;
+        position: relative;
+        margin-top: 12px;
+    }
+    
+    .animated-right{
+        width: 100%;
+    }
+
+    
+
+    .absolute-img3{
+        width: 60%;
+        position: absolute;
+        top: 0;
+        right: 5%;
+        z-index: 1;
+    }
+
+    .absolute-img4{
+        width: 60%;
+        transform: translate(-30%,50%);
+        z-index: 2;
+    }
+
+    .animated-right{
+       margin-top: 12px;
+    
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "eslintConfig": {
+    "extends": ["next", "next/core-web-vitals"],
+    "rules": {
+      "@next/next/no-img-element": "off"  // Disable the warning for <img> usage
+    }
+  }
+}
