@@ -27,10 +27,7 @@ import Shadow from '../Plans/_components/Shadow';
 import PulsingCircleSlo from '../../../../public/Components/PulsingCircle/PulsingCircleSlo';
 import GoogleAnalytics from '../../../../components/GoogleAnalytics/GoogleAnalytics';
 
-export const metadata = {
-  title: "O Nama | Tjaša & Marsel Fitness",
-  description: "Sva Tjaša in Marsel, osebna trenerja s strastjo do fitnesa in zdravega življenjskega sloga.",
-};
+
 
 export default function About() {
   const dispatch = useDispatch();

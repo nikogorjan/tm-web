@@ -27,10 +27,7 @@ import NavbarEng from '../../../../public/Components/Navbar/NavbarEng.client';
 import FooterEng from '../../../../public/Components/Footer/FooterEng';
 import GoogleAnalytics from '../../../../components/GoogleAnalytics/GoogleAnalytics';
 
-export const metadata = {
-  title: "Training Plans | Tjaša & Marsel Fitness",
-  description: "We offer personalized training plans for all fitness levels. Achieve your fitness goals with our expert programs.",
-};
+
 
 export default function Plans() {
   const dispatch = useDispatch();

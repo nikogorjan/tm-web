@@ -14,10 +14,6 @@ import NavbarEng from '../../../../public/Components/Navbar/NavbarEng.client';
 import FooterEng from '../../../../public/Components/Footer/FooterEng';
 import GoogleAnalytics from '../../../../components/GoogleAnalytics/GoogleAnalytics';
 
-export const metadata = {
-  title: "Blog | Tjaša & Marsel Fitness",
-  description: "Our blog provides tips on fitness, healthy lifestyle, and motivation.",
-};
 
 export default function Plans() {
   const dispatch = useDispatch();

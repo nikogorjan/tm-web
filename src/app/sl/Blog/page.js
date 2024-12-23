@@ -13,10 +13,7 @@ import Shadow from '../Plans/_components/Shadow';
 import PulsingCircleSlo from '../../../../public/Components/PulsingCircle/PulsingCircleSlo';
 import GoogleAnalytics from '../../../../components/GoogleAnalytics/GoogleAnalytics';
 
-export const metadata = {
-  title: "Blog | Tjaša & Marsel Fitness",
-  description: "Najin blog ponuja nasvete o fitnesu, zdravem življenjskem slogu in motivaciji.",
-};
+
 
 export default function Plans() {
   const dispatch = useDispatch();

@@ -19,10 +19,7 @@ import NavbarEng from '../../../../public/Components/Navbar/NavbarEng.client';
 import FooterEng from '../../../../public/Components/Footer/FooterEng';
 import GoogleAnalytics from '../../../../components/GoogleAnalytics/GoogleAnalytics';
 
-export const metadata = {
-  title: "Our Clients | Tjaša & Marsel Fitness",
-  description: "Discover the success stories of our clients who have achieved their fitness and lifestyle goals with our guidance.",
-};
+
 
 export default function Plans() {
   const dispatch = useDispatch();

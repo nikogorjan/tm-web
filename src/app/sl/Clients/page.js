@@ -19,10 +19,7 @@ import PulsingCircleSlo from '../../../../public/Components/PulsingCircle/Pulsin
 import GoogleAnalytics from '../../../../components/GoogleAnalytics/GoogleAnalytics';
 
 
-export const metadata = {
-  title: "Najine stranke | Tjaša & Marsel Fitness",
-  description: "Spoznajte uspešne zgodbe naših strank, ki so dosegale svoje fitnes in življenjske cilje z našo pomočjo.",
-};
+
 
 export default function Plans() {
   const dispatch = useDispatch();

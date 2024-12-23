@@ -28,10 +28,7 @@ import NavbarEng from '../../../../public/Components/Navbar/NavbarEng.client';
 import FooterEng from '../../../../public/Components/Footer/FooterEng';
 import GoogleAnalytics from '../../../../components/GoogleAnalytics/GoogleAnalytics';
 
-export const metadata = {
-  title: "About Us | Tjaša & Marsel Fitness",
-  description: "We are Tjaša & Marsel, passionate personal trainers dedicated to fitness and a healthy lifestyle.",
-};
+
 
 export default function About() {
   const dispatch = useDispatch();
