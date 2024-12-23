@@ -29,12 +29,12 @@ export async function POST(request) {
 
     // Create a transporter with correct SMTP settings
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST, // 'mail.tmlifestylecoaching.com'
-      port: parseInt(process.env.EMAIL_PORT) || 465, // 465 for SSL
-      secure: process.env.EMAIL_SECURE === 'true', // true for 465
+      host: process.env.EMAIL_HOST,
+      port: parseInt(process.env.EMAIL_PORT),
+      secure: process.env.EMAIL_SECURE === 'true', // false for STARTTLS
       auth: {
-        user: process.env.EMAIL_USER, // 'info@tmlifestylecoaching.com'
-        pass: process.env.EMAIL_PASS, // Your updated secure password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
