@@ -25,6 +25,12 @@ import { setBackgroundColor } from '../../store/colorSlice'; // Update the path 
 import Shadow from './_components/Shadow';
 import NavbarEng from '../../../../public/Components/Navbar/NavbarEng.client';
 import FooterEng from '../../../../public/Components/Footer/FooterEng';
+import GoogleAnalytics from '../../../../components/GoogleAnalytics/GoogleAnalytics';
+
+export const metadata = {
+  title: "Training Plans | Tjaša & Marsel Fitness",
+  description: "We offer personalized training plans for all fitness levels. Achieve your fitness goals with our expert programs.",
+};
 
 export default function Plans() {
   const dispatch = useDispatch();
@@ -38,6 +44,7 @@ export default function Plans() {
 
     return (
       <div className="bodyed">
+        <GoogleAnalytics/>
         <NavbarEng/>
         <Shadow/>
         <MotivationalVideo/>

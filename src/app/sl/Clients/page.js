@@ -16,7 +16,13 @@ import { setBackgroundColor } from '../../store/colorSlice'; // Update the path 
 import Footer from '../../../../public/Components/Footer/Footer';
 import Shadow from '../Plans/_components/Shadow';
 import PulsingCircleSlo from '../../../../public/Components/PulsingCircle/PulsingCircleSlo';
+import GoogleAnalytics from '../../../../components/GoogleAnalytics/GoogleAnalytics';
 
+
+export const metadata = {
+  title: "Najine stranke | Tjaša & Marsel Fitness",
+  description: "Spoznajte uspešne zgodbe naših strank, ki so dosegale svoje fitnes in življenjske cilje z našo pomočjo.",
+};
 
 export default function Plans() {
   const dispatch = useDispatch();
@@ -30,6 +36,7 @@ export default function Plans() {
 
     return (
       <div className="bodyed">
+        <GoogleAnalytics/>
         <Navbar/>
         <Shadow/>
         <ClientsVideo/>

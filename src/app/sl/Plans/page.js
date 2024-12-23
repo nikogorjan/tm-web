@@ -24,6 +24,12 @@ import { useDispatch } from 'react-redux';
 import { setBackgroundColor } from '../../store/colorSlice'; // Update the path as needed
 import Shadow from './_components/Shadow';
 import PulsingCircleSlo from '../../../../public/Components/PulsingCircle/PulsingCircleSlo';
+import GoogleAnalytics from '../../../../components/GoogleAnalytics/GoogleAnalytics';
+
+export const metadata = {
+  title: "Trening Plani | Tjaša & Marsel Fitness",
+  description: "Ponujava prilagojene trening načrte za vse ravni kondicije. Dosezite svoje fitnes cilje s strokovnimi programi.",
+};
 
 export default function Plans() {
   const dispatch = useDispatch();
@@ -37,6 +43,7 @@ export default function Plans() {
 
     return (
       <div className="bodyed">
+        <GoogleAnalytics/>
         <Navbar/>
         <Shadow/>
         <MotivationalVideo/>
