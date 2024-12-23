@@ -35,23 +35,10 @@ const beginnerPlans = [
         header: 'One-on-One',
         paragraph: 'Ideal for new fitness enthusiasts.',
         image: '/images/z3.webp',
-        difficulty: '230 € / 8 sessions',
+        difficulty: '230 € / 10 sessions',
         description: 'Includes a personalized nutrition plan, individual training plan, supplement plan, guidance on proper exercise execution via video and in person, weekly check-ins, and updates as needed.'
     },
-    {
-        header: 'One-on-One',
-        paragraph: 'Get started with easy-to-follow exercises.',
-        image: '/images/z2.webp',
-        difficulty: '200 € / 8 sessions',
-        description: 'Training only, without a nutrition or training plan.'
-    },
-    {
-        header: 'One-on-One',
-        paragraph: 'Beginner-friendly routines.',
-        image: '/images/z7.webp',
-        difficulty: '30 € / hour',
-        description: 'One hour of live personal training.'
-    },
+    
 ];
 
 const intermediatePlans = [

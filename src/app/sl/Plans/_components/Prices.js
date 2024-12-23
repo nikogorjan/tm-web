@@ -36,23 +36,10 @@ const Prices = () => {
             header: 'Ena na ena',
             paragraph: 'Ideal for new fitness enthusiasts.',
             image: '/images/z3.webp',
-            difficulty: '230 € / 8 treningov',
+            difficulty: '230 € / 10 treningov',
             description: 'Vsebuje individualni plan prehrane, individualni plan treninga, plan prehranskih dopolnil, svetovanje pravilne izvedbe vaj preko video vsebine in v živo, tedenski check-in in update po potrebi.'
         },
-        {
-            header: 'Ena na ena',
-            paragraph: 'Get started with easy-to-follow exercises.',
-            image: '/images/z2.webp',
-            difficulty: '200 € / 8 treningov',
-            description: 'Samo treniranje brez plana prehrane in plana treningov.'
-        },
-        {
-            header: 'Ena na ena',
-            paragraph: 'Beginner-friendly routines.',
-            image: '/images/z7.webp',
-            difficulty: '30 € / h',
-            description: 'Zakup ene ure trenerstva v živo.'
-        },
+        
         
     ];
 
