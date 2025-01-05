@@ -20,8 +20,7 @@ const services = [
     {
         serviceName: 'Trening ena na ena',
         serviceOptions: [
-            '8 treningov v živo s planom prehrane in individualnim planom treninga',
-            '8 treningov v živo brez dodatnega plana'
+            '10 treningov v živo s planom prehrane in individualnim planom treninga',
         ]
     },
     {

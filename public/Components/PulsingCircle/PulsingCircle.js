@@ -20,8 +20,7 @@ const services = [
     {
         serviceName: 'One-on-One Training',
         serviceOptions: [
-            '8 live training sessions with a nutrition plan and individual training plan',
-            '8 live training sessions without an additional plan'
+            '10 live training sessions with a nutrition plan and individual training plan',
         ]
     },
     {
